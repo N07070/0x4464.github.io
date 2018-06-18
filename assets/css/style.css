@@ -1,0 +1,428 @@
+/*
+ * Force the body and HTML to be  height and width 100% so they take up the entire screen.
+ */
+body, html {
+  height: 100%;
+  width: 100%; }
+
+/*
+ * Remove margin and padding so they can be set manually on these select elements.
+ */
+html, body, p, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, hr, pre, code, form, fieldset, legend, input, button, textarea, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+/*
+ * Required for HTML5 elements to display correctly in older browsers. 
+ * Add any other elements you will be using.
+ */
+div, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time {
+  display: block; }
+
+/*
+ * Resets the ul and ol elements to not contain list-style.
+ * These will need to be reset however you see fit for your content areas that will contain lists.
+ */
+ul, ol {
+  list-style: none; }
+
+/*
+ * Taken from Eric Meyer's CSS Reset (http://meyerweb.com/eric/tools/css/reset/).
+ * It prevents some browsers from inserting quotes on "q" and "p" ("p" in blockquotes).
+ */
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*
+ * Prevents the border from showing on images in a tags.
+ */
+a img {
+  border: 0; }
+
+/*
+ * Prevents the dotted border from showing up in Firefox on links.
+ */
+a:hover, a:active, a:focus, a:active {
+  outline: none;
+  -moz-outline-style: none; }
+
+header {
+  overflow: hidden;
+  letter-spacing: 2px;
+  padding-bottom: 5px;
+  padding-top: 50px; }
+  header .logo {
+    float: left; }
+  @media (max-width: 830px) {
+    header {
+      padding-top: 30px;
+      padding-bottom: 0; }
+      header .logo {
+        font-size: 1.5em; } }
+  @media (max-width: 600px) {
+    body.blog header .logo {
+      float: none;
+      text-align: center;
+      width: 100%; } }
+  body.light header .logo {
+    font-weight: 700; }
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0 0 1em; }
+
+strong {
+  font-weight: 700; }
+
+p {
+  line-height: 1.8em; }
+
+body {
+  transition: all .3s; }
+
+a {
+  color: #00AAEE;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  transition: color .3s; }
+  a:before {
+    background: #00AAEE;
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    height: 2px;
+    width: 0px;
+    transition: all .3s; }
+  a:hover {
+    color: #fff; }
+  a:hover:before {
+    width: 100%; }
+  body.light a {
+    font-weight: 700; }
+    body.light a:hover {
+      color: #1C1C1C; }
+
+html, body {
+  margin: 0;
+  padding: 0; }
+  html.light, body.light {
+    background: #efefef;
+    color: #000207; }
+
+body {
+  background: #1C1C1C;
+  color: #fff;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1px; }
+
+h1 {
+  display: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1em;
+  margin-bottom: 1em;
+  position: relative;
+  text-transform: uppercase; }
+
+.container {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1300px;
+  padding: 0 20px;
+  width: 100%; }
+
+@media (max-width: 930px) {
+  body {
+    font-size: 12px; } }
+
+@media (max-width: 830px) {
+  h2 {
+    margin-top: 50px; } }
+
+@media (max-width: 530px) {
+  body {
+    font-size: 14px; } }
+
+#home h2 {
+  color: #666; }
+  #home h2:before {
+    background: #3e4244;
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    height: 2px;
+    width: 30px; }
+
+#home .information {
+  overflow: hidden;
+  margin-top: 50px;
+  margin-bottom: 50px; }
+  #home .information--box {
+    box-sizing: border-box;
+    float: left;
+    width: 50%; }
+  #home .information--left {
+    padding-right: 20px; }
+  #home .information--right {
+    float: right;
+    padding-left: 20px; }
+  #home .information h2:nth-of-type(2) {
+    margin-top: 1em; }
+  #home .information li {
+    padding-bottom: 1em; }
+    #home .information li strong {
+      display: inline-block;
+      width: 120px; }
+    #home .information li.parent {
+      padding-bottom: 0; }
+  @media (max-width: 830px) {
+    #home .information {
+      margin-top: 0; }
+      #home .information--box {
+        float: none;
+        padding-left: 0;
+        width: 100%; } }
+  @media (max-width: 430px) {
+    #home .information li strong {
+      display: block; }
+    #home .information li.child strong {
+      display: none; } }
+
+#home .projects ul,
+#home .writing ul {
+  columns: 1; }
+
+#home .projects li,
+#home .writing li {
+  overflow: hidden;
+  position: relative; }
+
+#home .projects ul a,
+#home .writing ul a {
+  background: #1c1c1c;
+  padding-left: 15px;
+  position: absolute;
+  top: 0;
+  right: 0; }
+
+#home .projects span,
+#home .writing span {
+  display: inline-block;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden; }
+  #home .projects span:after,
+  #home .writing span:after {
+    color: #666;
+    content: " ..................................................................................";
+    font-weight: 700;
+    position: relative;
+    top: -3px; }
+
+@media (max-width: 930px) {
+  #home .projects ul li,
+  #home .writing ul li {
+    overflow: visible;
+    margin-bottom: 10px; }
+  #home .projects span,
+  #home .writing span {
+    display: block;
+    overflow: visible;
+    white-space: normal; }
+    #home .projects span:after,
+    #home .writing span:after {
+      display: none; }
+  #home .projects ul a,
+  #home .writing ul a {
+    display: inline-block;
+    position: relative;
+    padding-left: 0;
+    margin-top: 5px; } }
+
+#home .posts {
+  margin-bottom: 2em; }
+  #home .posts .post {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 5px; }
+  #home .posts .links {
+    background: #1c1c1c;
+    padding-left: 15px;
+    position: absolute;
+    top: 0;
+    right: 0; }
+  #home .posts span {
+    display: inline-block;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden; }
+    #home .posts span:after {
+      color: #666;
+      content: " ....................................................................................................................................................................";
+      font-weight: 700;
+      position: relative;
+      top: -3px; }
+  @media (max-width: 700px) {
+    #home .posts .post {
+      overflow: visible;
+      margin-bottom: 2em; }
+    #home .posts span {
+      display: block;
+      overflow: visible;
+      white-space: normal; }
+      #home .posts span:after {
+        display: none; }
+    #home .posts .links {
+      display: inline-block;
+      position: relative;
+      padding-left: 0;
+      margin-top: 5px; } }
+
+#home .tag {
+  border-radius: 3px;
+  color: #1c1c1c;
+  display: inline-block;
+  font-size: .8em;
+  font-weight: 700;
+  margin-right: 2em;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: pre; }
+  #home .tag--dev {
+    color: #00aaee; }
+    #home .tag--dev:before {
+      content: "Development  "; }
+  #home .tag--security {
+    color: #f03434; }
+    #home .tag--security:before {
+      content: "Security     "; }
+  #home .tag--bot {
+    color: #FDE3A7; }
+    #home .tag--bot:before {
+      content: "Bot          "; }
+  #home .tag--illustration {
+    color: #eb9532; }
+    #home .tag--illustration:before {
+      content: "Illustration "; }
+  #home .tag--glitch {
+    color: #8e44ad; }
+    #home .tag--glitch:before {
+      content: "Glitch Art   "; }
+  #home .tag--pixel {
+    color: #00b16a; }
+    #home .tag--pixel:before {
+      content: "Pixel Art    "; }
+  #home .tag--photography {
+    color: #F4D03F; }
+    #home .tag--photography:before {
+      content: "Photography  "; }
+  #home .tag--misc {
+    color: #ececec; }
+    #home .tag--misc:before {
+      content: "Miscellaneous"; }
+  #home .tag--article {
+    color: #666; }
+    #home .tag--article:before {
+      content: "Article"; }
+  #home .tag--image {
+    color: #999; }
+    #home .tag--image:before {
+      content: "Gallery"; }
+  #home .tag--project {
+    color: #eee; }
+    #home .tag--project:before {
+      content: "Project"; }
+  @media (max-width: 700px) {
+    #home .tag {
+      display: none; } }
+
+article {
+  margin: 2em 0; }
+  article h1, article h2, article h3, article h4, article h5, article h6 {
+    color: #000;
+    display: block;
+    margin: 0 0 30px;
+    padding: 0; }
+  article h1 {
+    font-size: 2em; }
+  article h2 {
+    font-size: 1.8em; }
+  article h3 {
+    font-size: 1.6em; }
+  article h4 {
+    font-size: 1.4em; }
+  article h5 {
+    font-size: 1.2em; }
+  article h6 {
+    font-size: 1em; }
+  article p {
+    color: #000;
+    margin: 0 0 30px;
+    padding: 0; }
+  article ul, article ol {
+    margin-bottom: 30px; }
+    article ul li, article ol li {
+      color: #000;
+      padding-bottom: .5em; }
+  article ul li {
+    list-style: disc;
+    margin-left: 20px; }
+  article ol li {
+    list-style: decimal-leading-zero;
+    margin-left: 38px; }
+  article blockquote {
+    border-left: solid 3px #00AAEE;
+    padding-left: 1em;
+    font-size: 1.3em;
+    padding: 1em 0 1em 1em;
+    margin-bottom: 30px; }
+    article blockquote p {
+      margin: 0;
+      padding: 0; }
+  article p code {
+    background: #666;
+    border-radius: 4px;
+    color: #fff;
+    padding: .5em .5em .3em; }
+  article pre {
+    background: #ddd;
+    border-bottom: solid 3px #00AAEE;
+    margin-bottom: 30px;
+    padding: 1em;
+    line-height: 1.5em;
+    overflow-x: auto; }
+
+#post {
+  padding: 50px 0; }
+  #post .gallery {
+    padding-bottom: 1em; }
+    #post .gallery a {
+      display: inline-block;
+      margin: 0 1em 1em 0;
+      max-width: 300px;
+      position: relative;
+      width: 100%; }
+      #post .gallery a span {
+        background: rgba(0, 0, 0, 0.7);
+        padding: .5em;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0; }
+      #post .gallery a img {
+        display: block;
+        width: 100%; }

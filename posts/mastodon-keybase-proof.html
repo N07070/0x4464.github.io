@@ -1,0 +1,48 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>0x4464 - Software Engineer - Spokane, WA</title><meta name="theme-color" content="#00AAEE"><meta name="description" content="0x4464 - Software Engineer - Spokane, WA"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,700" rel="stylesheet"><link rel="stylesheet" href="/assets/css/style.css"></head><body class="light article"><div class="container"><header><h1>0x4464 </h1><a class="logo" href="/">0x4464 </a></header><article><h1 id="mastodon-keybase-proof">Mastodon keybase proof</h1>
+<p>2018.06.05</p>
+<p>Since <a href="https://keybase.io">Keybase</a> doesn&#39;t have <a href="https://joinmastodon.org">Mastodon</a> support, I went ahead and made a proof of my own. This isn&#39;t really detailed anywhere, so I decided to write up a little explaination of what I did.</p>
+<p>This wasn&#39;t an original idea of mine and is based on <a href="https://glitch.social/@00dani">@00dani@glitch.social</a>&#39;s Mastodon proof (<a href="https://glitch.social/@00dani/329738">toot</a> and <a href="https://00dani.keybase.pub/proofs/glitch.txt">proof</a>).</p>
+<p>The general concept here is to use your PGP key to sign a message that states who you are on Mastodon and Keybase, host a copy of the file in your public keybase filesystem, and toot a link and SHA512 hash for the file on Mastodon.</p>
+<h2 id="signing-the-message">Signing the message</h2>
+<p>The first thing you want to do is go to the Keybase website and click <strong>sign</strong> on the top (the little pencil icon).</p>
+<p>In the message box, you will want to add something to this effect (modified with your account information):</p>
+<pre><code>I hereby claim:
+
+* I am @0x4464@infosec.exchange
+* I am 0x4464 (https://keybase.io/0x4464) on keybase.
+* I have a public key whose fingerprint is:
+  DDFE FA65 2466 206A 8145 D639 2543 1DA0 BF80 9063
+
+To claim this, I am signing this message with my public key. Then I will prove
+ownership of @0x4464@infosec.exchange by posting this document&#39;s
+publicly-accessible URL - https://0x4464.keybase.pub/proofs/mastodon.txt - as a
+toot on @0x4464@infosec.exchange, accompanied by its SHA-512 hash.
+</code></pre><p>When you put in your passphrase and click <strong>Sign</strong> it will output the signed version of the message. Copy the contents of the output box.</p>
+<h2 id="creating-the-public-file">Creating the public file</h2>
+<p>Open the Keybase app on your computer and click <strong>Files</strong> on the left-hand navigation. Hover over <strong>public</strong>, click the three dots that appear to the right and click <strong>Show in Explorer</strong> to open up the folder. For some reason this didn&#39;t work for me while writing this article, but you can go find your keybase filesystem wherever it was mounted (on Windows it&#39;s the <strong>K:\</strong> drive).</p>
+<p>Create a new directory in the <strong>public/USERNAME/</strong> directory called <strong>proofs</strong>, and create a new file in that directory called <strong>mastodon.txt</strong>. Paste the signed message into that file and save.</p>
+<p>Your newly created file should now be publicly available at <strong>USERNAME.keybase.pub/proofs/mastodon.txt</strong>. You can find my proof at <a href="https://0x4464.keybase.pub/proofs/mastodon.txt">https://0x4464.keybase.pub/proofs/mastodon.txt</a>.</p>
+<h2 id="getting-the-sha512-hash-of-the-file">Getting the SHA512 hash of the file</h2>
+<p>There are many ways to get the SHA512 for a file, including some online tools. I&#39;m running Windows, so I used Powershell, which I will explain here.</p>
+<p>Open up a new Powershell and change into the proofs directory with the following command:</p>
+<pre><code>cd K:\public\USERNAME\proofs\
+</code></pre><p>You can then get the SHA512 hash with this command:</p>
+<pre><code>Get-FileHash -Algorithm SHA512 .\mastodon.txt | Format-List
+</code></pre><p>This will output something like this:</p>
+<pre><code>Algorithm : SHA512
+Hash      : A6BBE76504488858D97E3AD6416DA335C7ADB4FCB2746EE4CC1326E57F6F2B2A96F4835D086C67D8274D7AAA279397D5362B24FD3BD3744D1CF355C66A99CCED
+Path      : K:\public\0x4464\proofs\mastodon.txt
+</code></pre><h2 id="tooting-your-proof">Tooting your proof</h2>
+<p>Copy the hash (in my example it&#39;s the part that starts with A6BBE7 and ends with 99CCED, yours will be different), and post a toot in this format (swap out your hash and username):</p>
+<pre><code>Verifying myself: I am 0x4464 on Keybase.io.
+
+A6BBE76504488858D97E3AD6416DA335C7ADB4FCB2746EE4CC1326E57F6F2B2A96F4835D086C67D8274D7AAA279397D5362B24FD3BD3744D1CF355C66A99CCED
+
+https://0x4464.keybase.pub/proofs/mastodon.txt
+
+#keybase
+</code></pre><p>This is what my Keybase proof toot looks like:</p>
+<p><iframe src="https://infosec.exchange/@0x4464/100153255511196605/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400"></iframe><script src="https://infosec.exchange/embed.js" async="async"></script></p>
+<p>I would suggest pinning the toot to your profile so users can see that first when landing on your account.</p>
+<p>I hope this helps someone who is unsure how to do something like this. Feel free to reach out to me on <a href="https://infosec.exchange/@0x4464">Mastodon</a> if you have any questions.</p>
+<a href="/">&larr; Back to home</a></article></div></body></html>

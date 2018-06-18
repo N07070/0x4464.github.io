@@ -1,0 +1,160 @@
+extends ./layout.pug
+
+block vars
+  - var bodyClass = '';
+
+block content
+  section#home
+    .information
+      .information--box.information--left.intro
+        h2 Information
+        p
+          | I'm a father, husband, and software engineer.
+          br
+          br
+          | Feel free to shoot me a DM on 
+          a(href="https://tiny.tilde.website/@0x4464" target="_blank") Mastodon
+          |  if you want to get in touch with me.
+          br
+          br
+        h2 PGP
+        p 
+          a(href="https://keybase.io/0x4464/pgp_keys.asc" target="_blank") DDFE FA65 2466 206A 8145 D639 2543 1DA0 BF80 9063
+      .information--box.information--right.contact
+        h2 Contact & Social
+        ul
+          li
+            strong Mastodon
+            a(href="https://tiny.tilde.website/@0x4464", target="_blank") @0x4464@tiny.tilde.website 
+          li
+            strong Keybase
+            a(href="https://keybase.io/0x4464", target="_blank") keybase.io/0x4464
+          li
+            strong Github
+            a(href="https://www.github.com/0x4464", target="_blank") github.com/0x4464
+          li
+            strong HackerOne
+            a(href="https://hackerone.com/0x4464", target="_blank") hackerone.com/0x4464
+          li
+            strong Bugcrowd
+            a(href="https://bugcrowd.com/0x4464", target="_blank") bugcrowd.com/0x4464
+          li
+            strong tilde.town
+            a(href="http://tilde.town/~x4464", target="_blank") ~x4464
+          li
+            strong Freenode
+            | _0x4464
+    .posts
+      h2 Blog posts
+      .post
+        span
+          .tag.tag--article
+          .tag.tag--security
+          | 2018.06.05 &#10095; Mastodon keybase proof
+        .links
+          a(href="posts/mastodon-keybase-proof.html") read &rarr;
+      .post
+        span
+          .tag.tag--article
+          .tag.tag--misc
+          | 2018.04.05 &#10095; Write something
+        .links
+          a(href="posts/write-something.html") read &rarr;
+    .posts
+      h2 Personal projects
+      .post
+        span
+          .tag.tag--project
+          .tag.tag--dev
+          | Toki seme firefox extension
+        .links
+          | [
+          a(href="https://github.com/0x4464/firefox-toki-seme", target="_blank") source
+          | ] 
+          a(href="https://addons.mozilla.org/en-US/firefox/addon/toki-seme-context-menu/", target="_blank") view extension &rarr;
+      .post
+        span
+          .tag.tag--project
+          .tag.tag--dev
+          | Toki seme chrome extension
+        .links
+          | [
+          a(href="https://github.com/0x4464/chrome-toki-seme", target="_blank") source
+          | ] 
+          a(href="https://chrome.google.com/webstore/detail/toki-seme-context-menu/icebfbmlhjhhnkhkkjbnopmbdkngmgfh", target="_blank") view extension &rarr;
+      .post
+        span
+          .tag.tag--project
+          .tag.tag--bot
+          | @asciiglitch@botsin.space
+        .links
+          a(href="https://botsin.space/@asciiglitch" target="_blank") view account &rarr;
+      .post
+        span
+          .tag.tag--project
+          .tag.tag--bot
+          | @missingno@botsin.space
+        .links
+          a(href="https://botsin.space/@missingno" target="_blank") view account &rarr;
+      .post
+        span
+          .tag.tag--image
+          .tag.tag--glitch
+          | Camera glitch
+        .links
+          a(href="posts/camera-glitch.html") view gallery &rarr;
+      .post
+        span
+          .tag.tag--image
+          .tag.tag--glitch
+          | Old glitch art (2014-2015)
+        .links
+          a(href="posts/old-glitches.html") view gallery &rarr;
+      .post
+        span
+          .tag.tag--project
+          .tag.tag--dev
+          | HIBP checker chrome extension
+        .links
+          | [
+          a(href="https://github.com/0x4464/chrome-hibp-checker", target="_blank") source
+          | ] 
+          a(href="https://chrome.google.com/webstore/detail/hibp-checker/kcgblihdfljicphpjmhboiigekfagnmc", target="_blank") view extension &rarr;
+      .post
+        span
+          .tag.tag--project
+          .tag.tag--dev
+          | Spotilist - spotify playlist sync
+        .links
+          a(href="https://github.com/0x4464/spotilist", target="_blank") github &rarr;
+      .post
+        span
+          .tag.tag--project
+          .tag.tag--dev
+          | Grab - cli download utility
+        .links
+          a(href="https://github.com/0x4464/grab", target="_blank") github &rarr;
+      .post
+        span
+          .tag.tag--project
+          .tag.tag--security
+          | Rubber ducky scripts
+        .links
+          a(href="https://github.com/0x4464/ducky-scripts", target="_blank") github &rarr;
+      .post
+        span
+          .tag.tag--project
+          .tag.tag--dev
+          | Dotfiles - my personal dotfiles
+        .links
+          a(href="https://github.com/0x4464/dotfiles", target="_blank") github &rarr;
+      .post
+        span
+          .tag.tag--project
+          .tag.tag--dev
+          | Toki seme - toki pona helper
+        .links
+          | [
+          a(href="https://github.com/0x4464/toki-seme", target="_blank") source
+          | ] 
+          a(href="https://0x4464.github.io/toki-seme", target="_blank") view site &rarr;

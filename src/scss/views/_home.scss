@@ -1,0 +1,297 @@
+#home {
+  h2 {
+    color: $brandOffBlack;
+
+    &:before {
+      background: #3e4244;
+      content: "";
+      display: block;
+      position: absolute;
+        bottom: 5px;
+        left: 0;
+      height: 2px;
+      width: 30px;
+    }
+  }
+
+  // Information
+
+  .information {
+    overflow: hidden;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    &--box {
+      box-sizing: border-box;
+      float: left;
+      width: 50%;
+    }
+
+    &--left {
+      padding-right: 20px;
+    }
+
+    &--right {
+      float: right;
+      padding-left: 20px;
+    }
+
+    h2:nth-of-type(2) {
+      margin-top: 1em;
+    }
+
+    ul {
+      //columns: 2;
+    }
+
+    li {
+      padding-bottom: 1em;
+
+      strong {
+        display: inline-block;
+        width: 120px;
+      }
+
+      &.parent {
+        padding-bottom: 0;
+      }
+    }
+
+    @media (max-width: 830px) {
+      margin-top: 0;
+
+      &--box {
+        float: none;
+        padding-left: 0;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 430px) {
+      li {
+        strong {
+          display: block;
+        }
+
+        &.child strong {
+          display: none;
+        }
+      }
+    }
+  }
+
+  // Projects & Writing
+
+  .projects,
+  .writing {
+
+    ul {
+      columns: 1;
+    }
+
+    li {
+      overflow: hidden;
+      position: relative;
+    }
+
+    ul a {
+      background: #1c1c1c;
+      padding-left: 15px;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    span {
+      display: inline-block;
+      box-sizing: border-box;
+      white-space: nowrap;
+      overflow: hidden;
+      &:after {
+        color: $brandOffBlack;
+        content: " ..................................................................................";
+        font-weight: 700;
+        position: relative;
+          top: -3px;
+      }
+    }
+
+    @media (max-width: 930px) {
+
+      ul li {
+        overflow: visible;
+        margin-bottom: 10px;
+      }
+
+      span {
+        display: block;
+        overflow: visible;
+        white-space: normal;
+
+        &:after {
+          display: none;
+        }
+      }
+
+      ul a {
+        display: inline-block;
+        position: relative;
+        padding-left: 0;
+        margin-top: 5px;
+      }
+
+    }
+  }
+
+  .posts {
+    margin-bottom: 2em;
+
+    .post {
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 5px;
+    }
+
+    .links {
+      background: #1c1c1c;
+      padding-left: 15px;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    span {
+      display: inline-block;
+      box-sizing: border-box;
+      white-space: nowrap;
+      overflow: hidden;
+      &:after {
+        color: $brandOffBlack;
+        content: " ....................................................................................................................................................................";
+        font-weight: 700;
+        position: relative;
+          top: -3px;
+      }
+    }
+
+    @media (max-width: 700px) {
+
+      .post {
+        overflow: visible;
+        margin-bottom: 2em;;
+      }
+
+      span {
+        display: block;
+        overflow: visible;
+        white-space: normal;
+
+        &:after {
+          display: none;
+        }
+      }
+
+      .links {
+        display: inline-block;
+        position: relative;
+        padding-left: 0;
+        margin-top: 5px;
+      }
+
+    }
+  }
+
+  .tag {
+    border-radius: 3px;
+    color: #1c1c1c;
+    display: inline-block;
+    font-size: .8em;
+    font-weight: 700;
+    margin-right: 2em;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: pre;
+
+    &--dev {
+      color: #00aaee;
+      &:before {
+        content: "Development  ";
+      }
+    }
+
+    &--security {
+      color: #f03434;
+      &:before {
+        content: "Security     ";
+      }
+    }
+
+    &--bot {
+      color: #FDE3A7;
+      &:before {
+        content: "Bot          ";
+      }
+    }
+
+    &--illustration {
+      color: #eb9532;
+      &:before {
+        content: "Illustration ";
+      }
+    }
+
+    &--glitch {
+      color: #8e44ad;
+      &:before {
+        content: "Glitch Art   ";
+      }
+    }
+
+    &--pixel {
+      color: #00b16a;
+      &:before {
+        content: "Pixel Art    ";
+      }
+    }
+
+    &--photography {
+      color: #F4D03F;
+      &:before {
+        content: "Photography  ";
+      }
+    }
+
+    &--misc {
+      color: #ececec;
+      &:before {
+        content: "Miscellaneous"
+      }
+    }
+
+    &--article {
+      color: #666;
+      &:before {
+        content: "Article";
+      }
+    }
+
+    &--image {
+      color: #999;
+      &:before {
+        content: "Gallery";
+      }
+    }
+
+    &--project {
+      color: #eee;
+      &:before {
+        content: "Project";
+      }
+    }
+
+    @media (max-width: 700px) {
+      display: none;
+    }
+  }
+  
+}

@@ -1,0 +1,7 @@
+node_modules
+.project
+.sass-cache
+.settings
+*.swo
+*.swp
+.DS_Store

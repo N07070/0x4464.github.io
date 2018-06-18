@@ -1,0 +1,14 @@
+// Global vars
+$brandColor: #00AAEE;
+$brandBlack: #1C1C1C;
+$brandOffBlack: #666;
+
+// Include global parts
+@import "includes/_reset";
+@import "includes/_header";
+@import "includes/_body";
+
+// Include views
+@import "views/_home";
+@import "views/_article";
+@import "views/_post";
