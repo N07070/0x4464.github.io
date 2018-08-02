@@ -2,6 +2,8 @@
 
 2018.06.05
 
+**Update 2018.08.02: I have written up an [alternative way of doing Mastodon proofs](/posts/mastodon-keybase-proof-alt.html) which I find to be a better option, and will be using myself. Both options are valid, so it's just a matter of opinion.**
+
 Since [Keybase](https://keybase.io) doesn't have [Mastodon](https://joinmastodon.org) support, I went ahead and made a proof of my own. This isn't really detailed anywhere, so I decided to write up a little explaination of what I did.
 
 This wasn't an original idea of mine and is based on [@00dani@glitch.social](https://glitch.social/@00dani)'s Mastodon proof ([toot](https://glitch.social/@00dani/329738) and [proof](https://00dani.keybase.pub/proofs/glitch.txt)).

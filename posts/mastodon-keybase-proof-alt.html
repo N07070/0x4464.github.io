@@ -1,0 +1,46 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>0x4464 - Software Engineer - Spokane, WA</title><meta name="theme-color" content="#00AAEE"><meta name="description" content="0x4464 - Software Engineer - Spokane, WA"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,700" rel="stylesheet"><link rel="stylesheet" href="/assets/css/style.css"></head><body class="light article"><div class="container"><header><h1>0x4464 </h1><a class="logo" href="/">0x4464 </a></header><article><h1 id="mastodon-keybase-proof-alternative">Mastodon keybase proof alternative</h1>
+<p>2018.08.02</p>
+<p>A couple of months ago I wrote up an article on <a href="/posts/mastodon-keybase-proof.html">Mastodon Keybase Proof</a> that explained how to set up a <a href="https://joinmastodon.org">Mastodon</a> proof on <a href="https://keybase.io">Keybase</a>.</p>
+<p>Since then, I&#39;ve looked further into the alternative version I&#39;ve seen around, which is to post a signed and encrypted message in the toot that can be directly verifyed with <strong>keybase verify</strong> in the command line. I like this option better, as it is easier to check the proof than the other one, in my opinion.</p>
+<h2 id="signing-the-message">Signing the message</h2>
+<p>Via the command line with the keybase cli you can use <strong>keybase sign</strong> to create a saltpack signed message that you can post to Mastodon, like so:</p>
+<pre><code>keybase sign -m &quot;I am @0x4464@tiny.tilde.website&quot;
+</code></pre><p>This will return something like this:</p>
+<pre><code>BEGIN KEYBASE SALTPACK SIGNED MESSAGE. kXR7VktZdyH7rvq v5weRa0zkUyw3D9 mqfbVNdS9QDfUFc TIjGoQrGAwHMP83 3zU2vXvGaXUYErH 9WnF9NA1VEyAbVe OlZwpnrlTDgR85h Xjm713lA7yA9XAR X9dgHmbrZ4C7VAk R0azpm0VauA8W06 lAU8N6WFiMfVghR JiGxbxEa6u0bhqG tJNqwakC9y50zD6 Y9sa0Inc5TWIppx gajLw0ZrqDgjyHv 4Q1. END KEYBASE SALTPACK SIGNED MESSAGE.
+</code></pre><h1 id="tooting-the-message">Tooting the message</h1>
+<p>You can then post it to Mastodon. I like this format for the toot:</p>
+<pre><code>Verifying myself: I am 0x4464 on Keybase.io.
+
+BEGIN KEYBASE SALTPACK SIGNED MESSAGE. kXR7VktZdyH7rvq v5weRa0zkUyw3D9 mqfbVNdS9QDfUFc TIjGoQrGAwHMP83 3zU2vXvGaXUYErH 9WnF9NA1VEyAbVe OlZwpnrlTDgR85h Xjm713lA7yA9XAR X9dgHmbrZ4C7VAk R0azpm0VauA8W06 lAU8N6WFiMfVghR JiGxbxEa6u0bhqG tJNqwakC9y50zD6 Y9sa0Inc5TWIppx gajLw0ZrqDgjyHv 4Q1. END KEYBASE SALTPACK SIGNED MESSAGE.
+
+#keybase 
+</code></pre><p>I would suggest pinning the toot to your profile so users can see that first when landing on your account.</p>
+<h2 id="adding-verify-info-to-keybase-file-system">Adding verify info to keybase file system</h2>
+<p>You should now add a file to your public keybase file system. I created a file under <strong>proofs/mastodon.txt</strong>. Since I have multiple accounts. I added all of them to the file. Here is the format I used:</p>
+<pre><code>You can verify that I am the following accounts on Mastodon:
+
+@0x4464@tiny.tilde.website
+Proof: https://tiny.tilde.website/@0x4464/100481806915663385
+Verify: keybase verify -m &quot;BEGIN KEYBASE SALTPACK SIGNED MESSAGE. kXR7VktZdyH7rvq v5weRa0zkUyw3D9 mqfbVNdS9QDfUFc TIjGoQrGAwHMP83 3zU2vXvGaXUYErH 9WnF9NA1VEyAbVe OlZwpnrlTDgR85h Xjm713lA7yA9XAR X9dgHmbrZ4C7VAk R0azpm0VauA8W06 lAU8N6WFiMfVghR JiGxbxEa6u0bhqG tJNqwakC9y50zD6 Y9sa0Inc5TWIppx gajLw0ZrqDgjyHv 4Q1. END KEYBASE SALTPACK SIGNED MESSAGE.&quot;
+
+@0x4464@infosec.exchange
+Proof: https://infosec.exchange/@0x4464/100481819565083473
+Verify: keybase verify -m &quot;BEGIN KEYBASE SALTPACK SIGNED MESSAGE. kXR7VktZdyH7rvq v5weRa0zkUyw3D9 mqfbVNdS9QDfUFc TIjGoQrGAwHMP83 3zU2vXvGaXRnu4E BjFRtkTKZEaHDdY 5Fl3FFtefJOndNo X5bc0aFZNPeRzGx y4vUA9ySWPMEYeK 6izX2JeqlFSiVNR yETleImiSJShrgw isHRjIw17JMddvQ J5KYKiGKpH1TF3L 5XD71J8lwulHCdV 9pOTd2VCNGOZqYn . END KEYBASE SALTPACK SIGNED MESSAGE.&quot;
+
+@0x4464@cybre.space
+Proof: https://cybre.space/@0x4464/100481813823883732
+Verify: keybase verify -m &quot;BEGIN KEYBASE SALTPACK SIGNED MESSAGE. kXR7VktZdyH7rvq v5weRa0zkUyw3D9 mqfbVNdS9QDfUFc TIjGoQrGAwHMP83 3zU2vXvGaXpPFWh J5R73uCxwAYDZ8y d9RaQS7vBnLzzQN ieG1fyQmFtBFLdW wM0fVq2no1TxU81 DuauER5IV3oCFXU UPNhnCoXOdqjf05 2h99SUPrfKD2kCO eKpNGA0RT2Ne7kN cl5TqSGbAwiweNw gIVgf6cP. END KEYBASE SALTPACK SIGNED MESSAGE.&quot;
+
+@0x4464@mstdn.jp
+Proof: https://mstdn.jp/@0x4464/100481822871577280
+Verify: keybase verify -m &quot;BEGIN KEYBASE SALTPACK SIGNED MESSAGE. kXR7VktZdyH7rvq v5weRa0zkUyw3D9 mqfbVNdS9QDfUFc TIjGoQrGAwHMP83 3zU2vXvGaYh58aK q07aZWVdhW5JekT c39OkZy5VUUNmGC KI6T2xBNLKwSTsE XzMQqL0QJvcwpMD O3sDJ4pk7y5JPer cJ2Gd1ETyI8IPxM nTiOjhFCYi20CwC nFvONyu6wUWsxor UgyyRFJCpkYc1qq dYo4. END KEYBASE SALTPACK SIGNED MESSAGE.&quot;
+</code></pre><p>You can see my copy of the proof file over on my <a href="https://keybase.pub/0x4464/proofs/mastodon.txt">public keybase file system</a>.</p>
+<p>As a reference, here are links to my proof toots on various instances:</p>
+<ul>
+<li><a href="https://tiny.tilde.website/@0x4464/100481806915663385">@0x4464@tiny.tilde.website</a></li>
+<li><a href="https://infosec.exchange/@0x4464/100481819565083473">@0x4464@infosec.exchange</a></li>
+<li><a href="https://cybre.space/@0x4464/100481813823883732">@0x4464@cybre.space</a></li>
+<li><a href="https://mstdn.jp/@0x4464/100481822871577280">@0x4464@mstdn.jp</a></li>
+</ul>
+<p>I hope this helps someone who is unsure how to do something like this. Feel free to reach out to me on <a href="https://tiny.tilde.website/@0x4464">Mastodon</a> if you have any questions.</p>
+<a href="/">&larr; Back to home</a></article></div></body></html>
